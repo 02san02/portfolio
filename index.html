@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+
+<!-- Primary SEO -->
+<title>Sanskar Nanegaonkar — AI Engineer | LLM Agents · RAG · Evals · Multimodal ML</title>
+<meta name="description" content="AI engineer (IIT Hyderabad '22, San Francisco) shipping production LLM, multimodal & clinical ML — enterprise RAG, voice agents at 1,000+ calls/day, RLHF." />
+<meta name="keywords" content="Sanskar Nanegaonkar, AI engineer, LLM, RAG, agents, evals, RLHF, DPO, multimodal, PyTorch, LangGraph, voice agents, clinical ML, IIT Hyderabad, San Francisco" />
+<meta name="author" content="Sanskar Nanegaonkar" />
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+<meta name="theme-color" content="#1A1A3D" />
+<meta name="color-scheme" content="dark" />
+<!-- NOTE: domain below is a placeholder (sanskarnanegaonkar.com) — confirm before launch; mirrored in robots.txt + sitemap.xml -->
+<link rel="canonical" href="https://sanskarnanegaonkar.com/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile" />
+<meta property="og:url" content="https://sanskarnanegaonkar.com/" />
+<meta property="og:title" content="Sanskar Nanegaonkar — AI Engineer" />
+<meta property="og:description" content="AI engineer shipping production LLM, multimodal & clinical ML — enterprise RAG, voice agents at 1,000+ calls/day, an FDA Breakthrough clinical model. IIT Hyderabad '22." />
+<meta property="og:image" content="https://sanskarnanegaonkar.com/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Sanskar Nanegaonkar — AI Engineer" />
+<meta property="og:site_name" content="Sanskar Nanegaonkar" />
+<meta property="og:locale" content="en_US" />
+<meta property="profile:first_name" content="Sanskar" />
+<meta property="profile:last_name" content="Nanegaonkar" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Sanskar Nanegaonkar — AI Engineer" />
+<meta name="twitter:description" content="Production LLM · multimodal · clinical ML. Enterprise RAG, voice agents, RLHF/DPO. IIT Hyderabad '22 · San Francisco." />
+<meta name="twitter:image" content="https://sanskarnanegaonkar.com/og.png" />
+<meta name="twitter:image:alt" content="Sanskar Nanegaonkar — AI Engineer" />
+
+<!-- Icons -->
+<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+<link rel="manifest" href="./site.webmanifest" />
+
+<!-- Fonts: Fraunces (cinematic display) · Mona Sans (body) · Spline Sans Mono (HUD) · Shippori Mincho (kanji 黄昏) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..600,0..100&family=Mona+Sans:ital,wght@0,400..700;1,400&family=Spline+Sans+Mono:wght@400..600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500&text=%E9%BB%84%E6%98%8F&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="./splitting.css" />
+<link rel="stylesheet" href="./style.css" />
+
+<!-- JSON-LD: Person + WebSite + ProfilePage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://sanskarnanegaonkar.com/#person",
+      "url": "https://sanskarnanegaonkar.com/",
+      "name": "Sanskar Nanegaonkar",
+      "givenName": "Sanskar",
+      "familyName": "Nanegaonkar",
+      "jobTitle": "AI Engineer",
+      "email": "sanskarnanegaonkar@gmail.com",
+      "description": "AI engineer with 4+ years shipping production LLM, multimodal, and clinical ML systems: enterprise RAG, voice agents at 1,000+ calls/day, and a clinical model supporting an FDA Breakthrough Device Designation.",
+      "address": { "@type": "PostalAddress", "addressLocality": "San Francisco", "addressRegion": "CA", "addressCountry": "US" },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Indian Institute of Technology Hyderabad",
+        "url": "https://www.iith.ac.in/"
+      },
+      "knowsAbout": [
+        "Large Language Models", "Retrieval-Augmented Generation", "LLM Agents",
+        "Evaluation pipelines", "RLHF", "Direct Preference Optimization",
+        "Multimodal machine learning", "PyTorch", "Clinical ML", "Voice AI agents"
+      ],
+      "sameAs": [ "https://www.linkedin.com/in/sanskar-nanegaonkar/" ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://sanskarnanegaonkar.com/#website",
+      "url": "https://sanskarnanegaonkar.com/",
+      "name": "Sanskar Nanegaonkar",
+      "description": "Personal site of Sanskar Nanegaonkar — AI engineer working on production LLM, multimodal, and clinical ML systems.",
+      "publisher": { "@id": "https://sanskarnanegaonkar.com/#person" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://sanskarnanegaonkar.com/#profilepage",
+      "url": "https://sanskarnanegaonkar.com/",
+      "name": "Sanskar Nanegaonkar",
+      "dateCreated": "2026-05-29",
+      "dateModified": "2026-05-29",
+      "mainEntity": { "@id": "https://sanskarnanegaonkar.com/#person" },
+      "isPartOf": { "@id": "https://sanskarnanegaonkar.com/#website" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- SVG defs: flare halo + brush transition -->
+<svg width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <defs>
+    <radialGradient id="flare-halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#FFF5E1" stop-opacity="0.95" />
+      <stop offset="22%"  stop-color="#FFE8A3" stop-opacity="0.75" />
+      <stop offset="55%"  stop-color="#FFC371" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#FFC371" stop-opacity="0" />
+    </radialGradient>
+    <!-- bristle/edge filter for a painterly brush stroke -->
+    <filter id="brush-edge" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.1 0.022" numOctaves="2" seed="7" stitchTiles="stitch" result="t" />
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="9" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+    <!-- twilight stroke: dusk rose falling into deep night (dramatic wipe) -->
+    <linearGradient id="brush-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#DE6262" />
+      <stop offset="30%"  stop-color="#3A4A7A" />
+      <stop offset="70%"  stop-color="#1A1A3D" />
+      <stop offset="100%" stop-color="#0C0E1F" />
+    </linearGradient>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#about">Skip to content</a>
+
+<!-- ============ ATMOSPHERE (fixed, behind everything) ============ -->
+<div class="sky" aria-hidden="true">
+  <div class="sky__gradient" id="sky-gradient"></div>
+  <div class="sky__sun" id="sky-sun">
+    <svg class="sky__sun-rays" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <circle cx="300" cy="300" r="300" fill="url(#flare-halo)" />
+    </svg>
+    <span class="sky__sun-core"></span>
+  </div>
+  <div class="sky__clouds sky__clouds--far"  id="clouds-far"></div>
+  <div class="sky__clouds sky__clouds--mid"  id="clouds-mid"></div>
+  <div class="sky__clouds sky__clouds--near" id="clouds-near"></div>
+  <canvas class="sky__particles" id="particles"></canvas>
+  <div class="sky__stars" id="stars" aria-hidden="true"></div>
+  <!-- Foreground horizon silhouette: city + telephone wires -->
+  <div class="sky__silhouette" id="silhouette" aria-hidden="true">
+    <svg viewBox="0 0 1600 320" preserveAspectRatio="xMidYMax slice">
+      <g class="silhouette__city">
+        <rect x="40"  y="180" width="70"  height="140" />
+        <rect x="120" y="140" width="46"  height="180" />
+        <rect x="176" y="205" width="60"  height="115" />
+        <rect x="250" y="120" width="40"  height="200" />
+        <rect x="300" y="170" width="80"  height="150" />
+        <rect x="392" y="210" width="54"  height="110" />
+        <rect x="980" y="160" width="64"  height="160" />
+        <rect x="1054" y="120" width="38" height="200" />
+        <rect x="1100" y="195" width="72" height="125" />
+        <rect x="1184" y="150" width="44" height="170" />
+        <rect x="1240" y="200" width="90" height="120" />
+        <rect x="1340" y="135" width="40" height="185" />
+        <rect x="1392" y="185" width="70" height="135" />
+        <rect x="1474" y="165" width="50" height="155" />
+        <rect class="win" x="58"  y="200" width="6" height="8" />
+        <rect class="win" x="132" y="160" width="6" height="8" />
+        <rect class="win" x="262" y="150" width="6" height="8" />
+        <rect class="win" x="1066" y="150" width="6" height="8" />
+        <rect class="win" x="1198" y="178" width="6" height="8" />
+        <rect class="win" x="1352" y="165" width="6" height="8" />
+      </g>
+      <g class="silhouette__poles">
+        <rect x="690" y="70" width="8" height="250" />
+        <rect x="668" y="96" width="52" height="7" />
+        <rect x="676" y="120" width="36" height="6" />
+        <path d="M694 100 C 980 150, 1300 150, 1594 96" />
+        <path d="M694 124 C 980 174, 1300 174, 1594 150" />
+        <path d="M694 100 C 420 150, 120 150, 6 110" />
+      </g>
+    </svg>
+  </div>
+  <div class="sky__grain"></div>
+  <div class="sky__cursor-glow" id="cursor-glow"></div>
+</div>
+
+<!-- ============ INTRO SPLASH ============ -->
+<div class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-logo">
+  <div class="intro__inner">
+    <div class="intro__kanji" aria-hidden="true">黄昏</div>
+    <p class="intro__eyebrow">AI&nbsp;ENGINEER&nbsp;·&nbsp;LLM&nbsp;SYSTEMS</p>
+    <p class="intro__logo" id="intro-logo">SANSKAR</p>
+    <p class="intro__sub">SHIPPING AT GOLDEN HOUR</p>
+    <button class="intro__btn" id="intro-enter" type="button">
+      <span>ENTER</span>
+      <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M2 8 H14 M9 3 L14 8 L9 13"/></svg>
+    </button>
+    <p class="intro__hint" aria-hidden="true">tap anywhere to enter</p>
+  </div>
+  <!-- twilight brush sweep: zigzag painted via stroke-dashoffset on ENTER -->
+  <svg class="intro__brush" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <path class="intro__stroke" fill="none" stroke="url(#brush-grad)" stroke-width="11"
+      stroke-linecap="round" stroke-linejoin="round" filter="url(#brush-edge)"
+      d="M 3 -6 L 8 106 L 13 -6 L 18 106 L 23 -6 L 28 106 L 33 -6 L 38 106 L 43 -6 L 48 106 L 53 -6 L 58 106 L 63 -6 L 68 106 L 73 -6 L 78 106 L 83 -6 L 88 106 L 93 -6 L 98 106 L 103 -6" />
+  </svg>
+</div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav" aria-label="Primary">
+  <a href="#top" class="nav__brand">
+    <span class="nav__brand-mark" aria-hidden="true"></span>
+    <span class="nav__brand-text">SANSKAR&nbsp;NANEGAONKAR</span>
+  </a>
+  <button class="nav__toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav__links" id="nav-links">
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#experience">EXPERIENCE</a></li>
+    <li><a href="#projects">PROJECTS</a></li>
+    <li><a href="#skills">SKILLS</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+  <div class="nav__hud" id="nav-hud" aria-hidden="true">
+    <span class="nav__hud-dot"></span>
+    <span class="nav__hud-text">SHIPPING</span>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero__inner">
+    <div class="hero__eyebrow">
+      <span class="hero__chip">IIT&nbsp;HYDERABAD&nbsp;&apos;22</span>
+      <span class="hero__chip">SAN&nbsp;FRANCISCO</span>
+      <span class="hero__chip hero__chip--accent">4+&nbsp;YEARS&nbsp;SHIPPING</span>
+    </div>
+
+    <div class="hero__name" id="hero-name">
+      <h1 class="hero__title" data-splitting>SANSKAR</h1>
+      <div class="hero__surname">
+        <span class="hero__surname-bar" aria-hidden="true"></span>
+        <span class="hero__surname-text">NANEGAONKAR</span>
+        <span class="hero__surname-dot" aria-hidden="true">·</span>
+        <span class="hero__surname-tag">AI&nbsp;ENGINEER</span>
+      </div>
+    </div>
+
+    <p class="hero__pitch">
+      I build <em>production LLM, multimodal, and clinical&nbsp;ML</em> systems — enterprise
+      RAG deployed for NTT&nbsp;DATA, voice agents handling <em>1,000+&nbsp;live calls a day</em>,
+      and a clinical model behind an <em>FDA Breakthrough Device Designation</em>.
+    </p>
+
+    <p class="hero__meta">
+      <span aria-hidden="true">↳</span>
+      <span>PyTorch · LLM Agents · RAG · Evals · RLHF · Multimodal</span>
+    </p>
+
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="#contact">GET IN TOUCH</a>
+      <a class="btn btn--ghost" href="#experience">SEE THE WORK</a>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span>SCROLL</span>
+      <span class="hero__scroll-line"></span>
+    </div>
+  </div>
+
+  <!-- Floating HUD readouts -->
+  <div class="hero__readouts" aria-hidden="true">
+    <div class="readout"><span class="readout__label">live&nbsp;calls/day</span><span class="readout__val">1,000+</span></div>
+    <div class="readout"><span class="readout__label">RAG&nbsp;customers</span><span class="readout__val">3</span></div>
+    <div class="readout"><span class="readout__label">model&nbsp;accuracy</span><span class="readout__val">83%</span></div>
+    <div class="readout"><span class="readout__label">doc&nbsp;time</span><span class="readout__val">−70%</span></div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============ 01 · ABOUT ============ -->
+<section class="band currents" id="about" tabindex="-1">
+  <div class="rail"><span class="rail__num">01</span><span class="rail__label">CURRENTS</span></div>
+  <div class="band__body">
+    <h2 class="kicker" data-splitting>ABOUT</h2>
+    <p class="lede">
+      I work across the whole AI-engineering stack — turning frontier models into systems
+      that survive contact with real users, real data, and real regulation.
+    </p>
+    <div class="two-col">
+      <div class="frost">
+        <p>
+          Four-plus years shipping <em>LLM, multimodal, and clinical ML</em> in production:
+          multi-tenant RAG for enterprise customers, agentic pipelines that convert messy
+          human activity into structured output, and voice agents that talk to a thousand
+          people a day. I'm comfortable from <em>data and training</em> through
+          <em>evals, post-training, and deployment</em>.
+        </p>
+      </div>
+      <div class="frost">
+        <p>
+          Before the LLM work I built clinical machine-learning systems — a multimodal
+          depression-severity model and a production pipeline validated with
+          <em>Northwell Health, Keio, and Hamamatsu</em> that contributed evidence toward
+          an <em>FDA Breakthrough Device Designation</em>. I like problems where being
+          right actually matters.
+        </p>
+      </div>
+    </div>
+    <blockquote class="quote">
+      <span class="quote__mark" aria-hidden="true">&ldquo;</span>
+      <p>The interesting part isn't getting a model to answer — it's getting a system to be trustworthy at a thousand answers a day.</p>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============ 02 · EXPERIENCE ============ -->
+<section class="band experience" id="experience" tabindex="-1">
+  <div class="rail"><span class="rail__num">02</span><span class="rail__label">TRAJECTORY</span></div>
+  <div class="band__body">
+    <h2 class="kicker" data-splitting>EXPERIENCE</h2>
+    <p class="lede">Four years at I'mbesideyou — from clinical ML into applied LLM systems.</p>
+
+    <ol class="timeline">
+      <li class="card">
+        <div class="card__head">
+          <span class="card__when">JUN 2024 — PRESENT</span>
+          <span class="card__tag">TOKYO · REMOTE</span>
+        </div>
+        <h3 class="card__title">Senior AI Engineer — Applied LLM Systems</h3>
+        <p class="card__org">I'mbesideyou Inc.</p>
+        <ul class="card__points">
+          <li>Shipped a multi-tenant HR-policy <strong>RAG assistant</strong> for NTT&nbsp;DATA and two enterprise customers — FastAPI + Qdrant per-tenant retrieval, Claude synthesis, policy-conflict detection, Langfuse audit traces, React admin UI.</li>
+          <li>Owned multimodal <strong>SOP-generation &amp; gap-analysis</strong> modules turning desktop activity into procedures — Claude / GPT-4V, LangGraph pipelines, Pydantic schemas, critic-style write-review-rewrite loops; deployed across three customers.</li>
+          <li>Built an <strong>auto-prompt optimization system</strong> that collapsed a week of transcript review per agent into one converged run — planner / extractor / synthesizer chains with regression scoring.</li>
+          <li>Shipped <strong>voice AI agents</strong> on Vapi &amp; LiveKit matching human pickup and conversion on <strong>1,000+&nbsp;calls/day</strong>.</li>
+        </ul>
+      </li>
+
+      <li class="card">
+        <div class="card__head">
+          <span class="card__when">JUN 2022 — MAY 2024</span>
+          <span class="card__tag">TOKYO · REMOTE</span>
+        </div>
+        <h3 class="card__title">Data Scientist — Clinical AI &amp; Multimodal ML</h3>
+        <p class="card__org">I'mbesideyou Inc.</p>
+        <ul class="card__points">
+          <li>Built a multimodal <strong>depression-severity model</strong> in PyTorch (OpenFace AUs, librosa prosody, transformer embeddings) — <strong>83%</strong> accuracy, extended to bipolar-vs-unipolar at 78% across 350+ patients.</li>
+          <li>Productionized the clinical pipeline on AWS + PostgreSQL; validation with Northwell Health, Keio &amp; Hamamatsu contributed evidence toward an <strong>FDA Breakthrough Device Designation</strong> and Q-Sub filings.</li>
+          <li>Built an LLM system converting therapy transcripts into Pydantic-validated <strong>SOAP notes</strong>; a clinician style-adaptation loop cut documentation time <strong>70%</strong> in a ten-clinician pilot.</li>
+        </ul>
+      </li>
+
+      <li class="card">
+        <div class="card__head">
+          <span class="card__when">MAY 2021 — MAY 2022</span>
+          <span class="card__tag">INDIA</span>
+        </div>
+        <h3 class="card__title">Data Science Intern</h3>
+        <p class="card__org">I'mbesideyou Inc.</p>
+        <ul class="card__points">
+          <li>Built an engagement-analysis pipeline (pandas, OpenCV, scikit-learn) over <strong>10,000+ classroom recordings</strong>; surfaced behavioral drivers of student churn that informed product prioritization.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 03 · PROJECTS ============ -->
+<section class="band projects" id="projects" tabindex="-1">
+  <div class="rail"><span class="rail__num">03</span><span class="rail__label">SELECTED</span></div>
+  <div class="band__body">
+    <h2 class="kicker" data-splitting>PROJECTS</h2>
+    <p class="lede">Things I've built to make AI systems measurable, aligned, and reproducible.</p>
+
+    <ul class="grid-cards">
+      <li class="card card--project">
+        <span class="card__index">P-01</span>
+        <h3 class="card__title">LLM Evaluation Harness</h3>
+        <p class="card__body">A pytest-style eval harness for LLM services: golden-set fixtures with versioned prompts, LLM-as-judge with confidence-aware aggregation, per-test cost/latency budgets, and a GitHub Actions gate that blocks regressions. Plugs into Langfuse traces.</p>
+        <ul class="tags">
+          <li>PyTest</li><li>Pydantic</li><li>Langfuse</li><li>LLM-as-judge</li><li>GitHub Actions</li>
+        </ul>
+      </li>
+      <li class="card card--project">
+        <span class="card__index">P-02</span>
+        <h3 class="card__title">RLHF &amp; Preference Optimization Stack</h3>
+        <p class="card__body">End-to-end alignment for a domain LLM: curated preference data, a reward model from pairwise rankings, LoRA / QLoRA SFT plus DPO / PPO policy optimization, evaluated on success, helpfulness, safety, latency &amp; cost before quantized vLLM serving.</p>
+        <ul class="tags">
+          <li>PyTorch</li><li>TRL</li><li>LoRA / QLoRA</li><li>DPO / PPO</li><li>vLLM</li>
+        </ul>
+      </li>
+      <li class="card card--project">
+        <span class="card__index">P-03</span>
+        <h3 class="card__title">Offline RL Benchmarking Suite</h3>
+        <p class="card__body">Reproducible sequential-decision experiments comparing PPO, SAC, CQL &amp; IQL on continuous-control and custom routing environments — replay-buffer analysis, reward-shaping ablations, off-policy evaluation, and dashboards tracking policy collapse and reward hacking.</p>
+        <ul class="tags">
+          <li>Gymnasium</li><li>Stable-Baselines3</li><li>TorchRL</li><li>D4RL / Minari</li><li>W&amp;B</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 04 · SKILLS + PUBLICATIONS ============ -->
+<section class="band expertise" id="skills" tabindex="-1">
+  <div class="rail"><span class="rail__num">04</span><span class="rail__label">TOOLBOX</span></div>
+  <div class="band__body">
+    <h2 class="kicker" data-splitting>SKILLS</h2>
+    <p class="lede">The stack I reach for, end to end.</p>
+
+    <div class="groups">
+      <div class="group">
+        <span class="group__label">LLM&nbsp;APPS</span>
+        <ul class="chips">
+          <li>RAG</li><li>Agents · ReAct</li><li>LangGraph</li><li>Pydantic outputs</li>
+          <li>Claude / OpenAI / Gemini</li><li>Voice · Vapi · LiveKit</li>
+        </ul>
+      </div>
+      <div class="group">
+        <span class="group__label">EVALS&nbsp;&amp;&nbsp;OBSERVABILITY</span>
+        <ul class="chips">
+          <li>LLM-as-judge</li><li>RAGAS</li><li>Golden sets</li><li>Regression scoring</li>
+          <li>Langfuse</li><li>LangSmith</li>
+        </ul>
+      </div>
+      <div class="group">
+        <span class="group__label">AI&nbsp;/&nbsp;ML</span>
+        <ul class="chips">
+          <li>PyTorch</li><li>Transformers · PEFT</li><li>LoRA / QLoRA</li><li>vLLM</li>
+          <li>GPTQ / AWQ</li><li>Multimodal fusion</li>
+        </ul>
+      </div>
+      <div class="group">
+        <span class="group__label">POST-TRAINING&nbsp;/&nbsp;ALIGNMENT</span>
+        <ul class="chips">
+          <li>RLHF</li><li>Reward modeling</li><li>DPO</li><li>PPO</li>
+          <li>Offline RL</li><li>Off-policy eval</li>
+        </ul>
+      </div>
+      <div class="group">
+        <span class="group__label">BACKEND&nbsp;/&nbsp;INFRA</span>
+        <ul class="chips">
+          <li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>Qdrant · FAISS</li>
+          <li>Docker · Kubernetes</li><li>AWS · HIPAA / SOC&nbsp;2</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pubs">
+      <div class="pubs__edu frost">
+        <span class="pubs__eyebrow">EDUCATION</span>
+        <h3 class="pubs__title">Indian Institute of Technology, Hyderabad</h3>
+        <p class="pubs__detail">B.Tech, Engineering Physics · CGPA 8.48&nbsp;/&nbsp;10 · 2018–2022</p>
+      </div>
+      <div class="pubs__list frost">
+        <span class="pubs__eyebrow">PUBLICATIONS</span>
+        <p class="pubs__item">Nanegaonkar &amp; Ando. <em>A Practical Approach to Predicting Depression: Verbal and Non-Verbal Insights with Machine Learning.</em> HIIJ 13(2), May 2024.</p>
+        <p class="pubs__item">Co-author, <em>Chatbot Interventions for Early-Stage Depression and Anxiety.</em> EHPS Conference, Aug 2025.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 · CONTACT ============ -->
+<section class="band contact" id="contact" tabindex="-1">
+  <div class="rail"><span class="rail__num">05</span><span class="rail__label">TRANSMIT</span></div>
+  <div class="band__body">
+    <h2 class="kicker" data-splitting>CONTACT</h2>
+    <p class="lede">
+      Open to hard problems in applied AI — LLM systems, evals, post-training, multimodal.
+      Always happy to talk shop.
+    </p>
+    <ul class="contact__links">
+      <li>
+        <a href="mailto:sanskarnanegaonkar@gmail.com">
+          <span class="contact__num">→ 01</span>
+          <span class="contact__text">EMAIL</span>
+          <span class="contact__host">sanskarnanegaonkar@gmail.com</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/sanskar-nanegaonkar/" target="_blank" rel="noopener">
+          <span class="contact__num">→ 02</span>
+          <span class="contact__text">LINKEDIN</span>
+          <span class="contact__host">linkedin.com/in/sanskar-nanegaonkar</span>
+        </a>
+      </li>
+      <li>
+        <span class="contact__placeholder" aria-disabled="true">
+          <span class="contact__num">→ 03</span>
+          <span class="contact__text">GITHUB</span>
+          <span class="contact__host">coming soon</span>
+        </span>
+      </li>
+      <li>
+        <span class="contact__placeholder" aria-disabled="true">
+          <span class="contact__num">→ 04</span>
+          <span class="contact__text">GOOGLE SCHOLAR</span>
+          <span class="contact__host">coming soon</span>
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <span class="site-footer__l">SANSKAR NANEGAONKAR · AI ENGINEER</span>
+  <span class="site-footer__c">A SITE AT GOLDEN HOUR</span>
+  <span class="site-footer__r">© 2026</span>
+</footer>
+
+<script src="./splitting.min.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>

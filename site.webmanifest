@@ -1,0 +1,13 @@
+{
+  "name": "Sanskar Nanegaonkar — AI Engineer",
+  "short_name": "Sanskar",
+  "description": "AI engineer shipping production LLM, multimodal & clinical ML systems.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1A1A3D",
+  "theme_color": "#1A1A3D",
+  "icons": [
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any" }
+  ]
+}
