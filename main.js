@@ -1,5 +1,5 @@
 /* =====================================================================
-   SANSKAR NANEGAONKAR — atmosphere engine
+   SANSKAR NANEGAONKAR · atmosphere engine
    - scroll = passage of a day (peach -> blue -> indigo)
    - drifting particles, cloud parallax, sun set, stars + lit windows rise
    - splitting char reveals, scroll-safe reveals, cursor glow, mobile nav
