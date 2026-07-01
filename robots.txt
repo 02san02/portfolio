@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sanskarnanegaonkar.com/sitemap.xml
+Sitemap: https://www.sanskar-nanegaonkar.com/sitemap.xml
