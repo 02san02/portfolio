@@ -102,16 +102,19 @@
   /* ---------- 4. Intro splash (focus-managed, tap/keyboard/safety dismiss) ---------- */
   const intro = $("#intro"), enterBtn = $("#intro-enter");
   let introKey = null, introSafety = null, introExiting = false;
+  const introInertEls = $$(".nav, .hero, #main, .site-footer");
   function finishIntro() {
     if (!intro) return;
     intro.classList.add("is-gone");
     intro.style.display = "none";
     document.body.style.overflow = "";
+    introInertEls.forEach((el) => { try { el.inert = false; } catch (_) {} });
     setTimeout(revealInView, 60);
   }
   function enterSite() {
     if (!intro || introExiting || intro.classList.contains("is-gone")) return;
     introExiting = true;
+    try { sessionStorage.setItem("seen-intro", "1"); } catch (_) {}
     if (introKey) document.removeEventListener("keydown", introKey);
     if (introSafety) clearTimeout(introSafety);
     intro.classList.add("is-exiting");
@@ -123,23 +126,27 @@
       stroke.style.strokeDasharray = len;
       stroke.style.strokeDashoffset = len;
       void stroke.getBoundingClientRect();              // reflow so the draw transition runs
-      stroke.style.transition = "stroke-dashoffset 1.1s cubic-bezier(.6,.04,.35,1)";
+      stroke.style.transition = "stroke-dashoffset .55s cubic-bezier(.6,.04,.35,1)";
       requestAnimationFrame(() => { stroke.style.strokeDashoffset = "0"; });
-      // paint across (1.1s) → brief hold → lift the curtain to reveal the hero
-      intro.style.transition = "opacity .55s ease-in 1.25s";
+      // paint across (.55s), curtain starts lifting mid-paint; total exit under a second
+      intro.style.transition = "opacity .4s ease-in .5s";
       requestAnimationFrame(() => { intro.style.opacity = "0"; });
-      setTimeout(finishIntro, 1950);
+      setTimeout(finishIntro, 950);
     } else {
       intro.style.transition = "opacity .4s ease";
       requestAnimationFrame(() => { intro.style.opacity = "0"; });
       setTimeout(finishIntro, 420);
     }
   }
-  const skipIntro = /[?&]nointro\b/.test(location.search);
+  let seenIntro = false;
+  try { seenIntro = sessionStorage.getItem("seen-intro") === "1"; } catch (_) {}
+  // skip for: explicit ?nointro, deep links (#experience etc.), and repeat visits this session
+  const skipIntro = /[?&]nointro\b/.test(location.search) || !!location.hash || seenIntro;
   if (intro && skipIntro) {
     intro.classList.add("is-gone"); intro.style.display = "none";
   } else if (intro) {
     document.body.style.overflow = "hidden";
+    introInertEls.forEach((el) => { try { el.inert = true; } catch (_) {} });
     // hide the brush stroke on load (it only paints across on ENTER)
     const introStroke0 = $(".intro__stroke");
     if (introStroke0 && typeof introStroke0.getTotalLength === "function") {
@@ -152,13 +159,15 @@
       try { enterBtn.focus({ preventScroll: true }); } catch (_) {}
     }
     intro.addEventListener("click", enterSite);          // tap anywhere to enter
+    ["wheel", "touchmove"].forEach((ev) =>               // first scroll gesture enters too
+      intro.addEventListener(ev, enterSite, { passive: true }));
     introKey = (e) => {
       if ((e.key === "Enter" || e.key === "Escape" || e.key === " ") && !introExiting) {
         e.preventDefault(); enterSite();
       }
     };
     document.addEventListener("keydown", introKey);
-    introSafety = setTimeout(enterSite, 9000);           // never trap a non-interacting user
+    introSafety = setTimeout(enterSite, 3500);           // never trap a non-interacting user
   }
 
   /* ---------- 5. Mobile nav toggle ---------- */
@@ -231,19 +240,21 @@
   const glow = $("#cursor-glow");
   if (glow && finePointer && !reduceMotion) {
     let tx = 0, ty = 0, cx = 0, cy = 0, on = false, gRaf = 0;
-    window.addEventListener("pointermove", (e) => {
-      tx = e.clientX; ty = e.clientY;
-      if (!on) { on = true; glow.classList.add("is-on"); }
-    }, { passive: true });
-    window.addEventListener("pointerleave", () => { on = false; glow.classList.remove("is-on"); });
-    (function loop() {
+    function loop() {
       cx += (tx - cx) * 0.12; cy += (ty - cy) * 0.12;
       glow.style.left = cx + "px"; glow.style.top = cy + "px";
       gRaf = requestAnimationFrame(loop);
-    })();
+    }
+    // rAF loop starts lazily on the first pointer move (no idle battery burn)
+    window.addEventListener("pointermove", (e) => {
+      tx = e.clientX; ty = e.clientY;
+      if (!on) { on = true; glow.classList.add("is-on"); }
+      if (!gRaf) { cx = tx; cy = ty; gRaf = requestAnimationFrame(loop); }
+    }, { passive: true });
+    window.addEventListener("pointerleave", () => { on = false; glow.classList.remove("is-on"); });
     document.addEventListener("visibilitychange", () => {
       if (document.hidden) { cancelAnimationFrame(gRaf); gRaf = 0; }
-      else if (!gRaf) gRaf = requestAnimationFrame(function l() { cx += (tx-cx)*0.12; cy += (ty-cy)*0.12; glow.style.left=cx+"px"; glow.style.top=cy+"px"; gRaf=requestAnimationFrame(l); });
+      else if (!gRaf && on) gRaf = requestAnimationFrame(loop);
     });
   }
 
